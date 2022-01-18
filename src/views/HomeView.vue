@@ -1,12 +1,6 @@
-Skip to content Pull requests Issues Marketplace Explore @valerih12 thauska /
-peticov-ar Public Code Issues 1 Pull requests Actions Projects Wiki Security
-Insights peticov-ar/src/components/Aframe.vue @thauska thauska improving A-Frame
-and AR.js ES6 with Vue.js Latest commit 911fb81 on Oct 31, 2021 History 1
-contributor 167 lines (157 sloc) 3.86 KB
 <template>
   <div>
     <a-scene vr-mode-ui="enabled: false" embedded arjs>
-      <!-- Quadrado Mágico -->
       <a-marker id="cite" type="pattern" url="marker/pt-cite.patt">
         <a-plane
           src="assets/quadrado-magico-black.jpg"
@@ -31,8 +25,6 @@ contributor 167 lines (157 sloc) 3.86 KB
           rotation="-90 0 0"
         ></a-text>
       </a-marker>
-
-      <!--Disponibilitá-->
       <a-marker id="frac1" type="pattern" url="marker/pt-frac1.patt">
         <a-plane
           color="white"
@@ -58,8 +50,6 @@ contributor 167 lines (157 sloc) 3.86 KB
         >
         </a-plane>
       </a-marker>
-
-      <!--Ladder-->
       <a-marker id="frac2" type="pattern" url="marker/pt-frac2.patt">
         <a-image
           src="assets/ladder.png"
@@ -71,8 +61,6 @@ contributor 167 lines (157 sloc) 3.86 KB
           transparent="true"
         ></a-image>
       </a-marker>
-
-      <!-- Vídeo -->
       <a-assets>
         <video
           id="peticov_animation"
@@ -93,8 +81,6 @@ contributor 167 lines (157 sloc) 3.86 KB
         >
         </a-video>
       </a-marker>
-
-      <!-- Labirinto -->
       <a-marker id="frac4" type="pattern" url="marker/pt-frac4.patt">
         <a-plane
           id="lab"
@@ -162,6 +148,7 @@ a-scene {
   left: 0;
   right: 0;
   bottom: 0;
+  overflow: hidden;
 }
 * {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
